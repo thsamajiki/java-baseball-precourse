@@ -28,4 +28,14 @@ public class Player {
   public List<Integer> getInputNumberList(){
     return this.inputNumberList;
   }
+
+  // 게임 재시작 여부를 결정하는 메서드
+  public String inputReplay(){
+    String inputReplay = Console.readLine();
+
+    if (!inputReplay.equals("1") && !inputReplay.equals("2")) {
+      throw new IllegalArgumentException("잘못된 입력입니다. 1 또는 2를 입력하세요.");
+    }
+    return inputReplay;
+  }
 }

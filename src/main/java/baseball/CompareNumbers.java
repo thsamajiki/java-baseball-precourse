@@ -23,6 +23,14 @@ public class CompareNumbers {
     } else {
       System.out.println(balls + "볼");
     }
+
+    // 3 스트라이크인 경우 게임 종료
+    if (strikes == 3) {
+      printGameOverMessage();
+      gameOver = true;
+    } else {
+      gameOver = false;
+    }
   }
 
   private int calculateStrikes(List<Integer> randomNumberList, List<Integer> playerNumberList) {
@@ -47,5 +55,13 @@ public class CompareNumbers {
     }
 
     return balls;
+  }
+
+  public boolean isGameOver() { // 게임 오버 여부
+    return gameOver;
+  }
+
+  private void printGameOverMessage() {
+    System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
   }
 }

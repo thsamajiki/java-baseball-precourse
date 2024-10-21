@@ -30,4 +30,8 @@ public class Computer {
   public List<Integer> getRandomNumberList() {
     return this.randomNumberList;
   }
+
+  public void resetRandomNumberList() {
+    this.randomNumberList = generateRandomNumberList();
+  }
 }
