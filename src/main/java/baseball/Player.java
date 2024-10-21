@@ -17,6 +17,7 @@ public class Player {
   public void playerInputNumber() {    // 사용자 입력 메서드
     System.out.print("숫자를 입력해주세요 : ");
     String input = Console.readLine();
+    validatesNumber(input);
 
     inputNumberList.clear(); // 이전 입력값을 비우기
     for (char ch : input.toCharArray()) { // 입력받은 숫자를 List에 저장
