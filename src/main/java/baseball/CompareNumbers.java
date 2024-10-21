@@ -12,6 +12,17 @@ public class CompareNumbers {
 
     int strikes = calculateStrikes(randomNumberList, playerNumberList);
     int balls = calculateBalls(randomNumberList, playerNumberList);
+
+    // 결과 출력
+    if (strikes == 0 && balls == 0) {
+      System.out.println("낫싱");
+    } else if (strikes > 0 && balls > 0) {
+      System.out.println(balls + "볼 " + strikes + "스트라이크");
+    } else if (strikes > 0) {
+      System.out.println(strikes + "스트라이크");
+    } else {
+      System.out.println(balls + "볼");
+    }
   }
 
   private int calculateStrikes(List<Integer> randomNumberList, List<Integer> playerNumberList) {
